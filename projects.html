@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Deshika R - Projects</title>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+
+    body {
+      background: linear-gradient(to right, #edde95, #f08e90);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav button, .dropbtn {
+      background: #fff;
+      color: #333;
+      border: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    nav button:hover, .dropbtn:hover {
+      background-color: #ff6f61;
+      color: white;
+    }
+
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #fff;
+      min-width: 180px;
+      z-index: 1;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    }
+
+    .dropdown-content a {
+      color: #333;
+      padding: 10px 15px;
+      text-decoration: none;
+      display: block;
+      transition: background 0.2s ease;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #eee;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+
+    .page-title {
+      text-align: center;
+      font-size: 2.8rem;
+      color: #fff59d;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      animation: fadeInUp 1s ease-in-out;
+    }
+
+    .projects-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .project-card {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 1.5rem;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      backdrop-filter: blur(10px);
+      animation: zoomIn 1s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+    }
+
+    .project-icon {
+      width: 40px;
+      height: 40px;
+      color: #ffe082;
+      margin-bottom: 0.5rem;
+    }
+
+    .project-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+      color: #fff59d;
+    }
+
+    .project-desc {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #fff;
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes zoomIn {
+      from { transform: scale(0.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <button onclick="window.location.href='home.html'">Home</button>
+      <button onclick="window.location.href='about.html'">About</button>
+      <button onclick="window.location.href='projects.html'">Projects</button>
+      <button onclick="window.location.href='resume.html'">Resume</button>
+
+      <div class="dropdown">
+        <button class="dropbtn">My References</button>
+        <div class="dropdown-content">
+          <a href="https://www.linkedin.com/in/deshika-r-289484" target="_blank">LinkedIn</a>
+          <a href="https://github.com/deshika7" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <button onclick="window.location.href='contact.html'">Contact</button>
+    </nav>
+  </header>
+
+  <h1 class="page-title">My Projects</h1>
+
+  <section class="projects-container">
+    <div class="project-card">
+      <i data-lucide="cloud-sun" class="project-icon"></i>
+      <div class="project-title">Weather Forecast App</div>
+      <div class="project-desc">
+        Real-time weather with OpenWeatherMap API, 7-day forecast, temperature, wind & humidity data. Clean UI with robust error handling.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <i data-lucide="dice-5" class="project-icon"></i>
+      <div class="project-title">Prediction Game</div>
+      <div class="project-desc">
+        A fun, interactive game that combines number-based flower prediction and a coin toss game. Web + Python versions available.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <i data-lucide="map" class="project-icon"></i>
+      <div class="project-title">Hey With Me..! Explore Tamil Nadu</div>
+      <div class="project-desc">
+        Smart tourism app with multilingual support, chatbot, AR view, offline access, audio guides, and map-based AI suggestions.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <i data-lucide="calendar-clock" class="project-icon"></i>
+      <div class="project-title">SmartSched</div>
+      <div class="project-desc">
+        AI-based timetable system for schools & colleges with chatbot, real-time conflict-free scheduling, and customization support.
+      </div>
+    </div>
+
+    <div class="project-card">
+      <i data-lucide="palette" class="project-icon"></i>
+      <div class="project-title">Ethuisasit - UI Design Studio</div>
+      <div class="project-desc">
+        Designed sleek and user-focused UI/UX prototypes using Figma, Canva, and modern design tools. Delivered multiple screen flows with aesthetic, accessibility, and UX principles in mind.
+      </div>
+    </div>
+  </section>
+
+  <script>
+    lucide.createIcons();
+  </script>
+
+</body>
+</html>
